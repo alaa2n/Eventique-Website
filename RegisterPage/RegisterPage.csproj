@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,45 +68,295 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account.aspx" />
+    <Content Include="AddAdmin.aspx" />
+    <Content Include="Admin.aspx" />
     <Content Include="Create.aspx" />
-    <Content Include="Css\create.css" />
-    <Content Include="Css\Home.css" />
-    <Content Include="Css\sign.css" />
-    <Content Include="home.aspx" />
+    <Content Include="Css\addadmin.css" />
+    <Content Include="Css\Admin.css" />
+    <Content Include="Css\Create.css" />
+    <Content Include="Css\Customize.css" />
+    <Content Include="Css\faq.css" />
+    <Content Include="Css\gallery.css" />
+    <Content Include="Css\html.css" />
+    <Content Include="Css\package.css" />
+    <Content Include="Css\pay.css" />
+    <Content Include="Css\Policies.css" />
+    <Content Include="Css\schedule.css" />
+    <Content Include="Css\signin.css" />
+    <Content Include="Css\style.css" />
+    <Content Include="Css\event.css" />
+    <Content Include="Css\team.css" />
+    <Content Include="Css\thank.css" />
+    <Content Include="Customize.aspx" />
+    <Content Include="Event.aspx" />
+    <Content Include="FAQ.aspx" />
+    <Content Include="Gallery.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\1.jpeg" />
+    <Content Include="images\111.jpeg" />
+    <Content Include="images\123.jpg" />
+    <Content Include="images\18 birthday party.jpeg" />
+    <Content Include="images\2.jpeg" />
+    <Content Include="images\200+ Event Ideas To Steal Today.jpeg" />
+    <Content Include="images\2h.jpg" />
+    <Content Include="images\3.jpeg" />
+    <Content Include="images\3h.jpg" />
+    <Content Include="images\4 .jpeg" />
+    <Content Include="images\4h.jpg" />
+    <Content Include="images\5.jpeg" />
+    <Content Include="images\55.jpeg" />
+    <Content Include="images\6.jpeg" />
+    <Content Include="images\about - Copy.jpg" />
     <Content Include="images\about.jpg" />
+    <Content Include="images\acc-removebg-preview.png" />
+    <Content Include="images\acc.jpg" />
+    <Content Include="images\accedited.png" />
+    <Content Include="images\account - Copy.png" />
+    <Content Include="images\account-removebg-preview - Copy.png" />
+    <Content Include="images\account-removebg-preview.png" />
+    <Content Include="images\account.png" />
+    <Content Include="images\Alaa.jpg" />
+    <Content Include="images\Amr.jpg" />
+    <Content Include="images\annnn.jpeg" />
+    <Content Include="images\avatar.png" />
+    <Content Include="images\b1.jpeg" />
+    <Content Include="images\b2.jpeg" />
+    <Content Include="images\b3.jpeg" />
+    <Content Include="images\b4.jpeg" />
+    <Content Include="images\back - Copy.jpg" />
     <Content Include="images\back.jpg" />
+    <Content Include="images\back2.jpg" />
+    <Content Include="images\back3.jpg" />
+    <Content Include="images\back4.png" />
     <Content Include="images\bakary.png" />
+    <Content Include="images\birthdays.jpeg" />
+    <Content Include="images\Birthday\1.png" />
+    <Content Include="images\Birthday\2.png" />
+    <Content Include="images\Birthday\3.png" />
+    <Content Include="images\Birthday\4.png" />
+    <Content Include="images\Birthday\5.png" />
+    <Content Include="images\Birthday\6.jpeg" />
+    <Content Include="images\Birthday\7.png" />
+    <Content Include="images\Birthday\8.png" />
+    <Content Include="images\Birthday\heading2.png" />
+    <Content Include="images\blurback.jpg" />
+    <Content Include="images\book - Copy.png" />
+    <Content Include="images\Book Now Clipart Vector, Book Now Bussiness Icon, Book Icons, Banner, Business PNG Image For Free Download.jpeg" />
+    <Content Include="images\book now.png" />
+    <Content Include="images\book.jpeg" />
     <Content Include="images\book.png" />
+    <Content Include="images\brand - Copy.png" />
+    <Content Include="images\Brand Launch Event, One Mayfair.jpeg" />
+    <Content Include="images\brand.png" />
+    <Content Include="images\catering - Copy.png" />
     <Content Include="images\catering.png" />
+    <Content Include="images\City Background, Photos, and Wallpaper for Free Download.jpeg" />
+    <Content Include="images\Client event seminar room.jpg" />
+    <Content Include="images\Colombia.jpeg" />
+    <Content Include="images\Confused Boy PNG Transparent, Young Boy Illustration Confused, Young Boy, Illustration, Confused PNG Image For Free Download.jpeg" />
+    <Content Include="images\Coquette 🎀.jpeg" />
+    <Content Include="images\Corporate Event Creativity.jpeg" />
+    <Content Include="images\customize-removebg-preview.png" />
+    <Content Include="images\customize.jpeg" />
+    <Content Include="images\customize.jpg" />
+    <Content Include="images\dd.jpeg" />
+    <Content Include="images\decoração aniversário.jpeg" />
     <Content Include="images\dj.png" />
+    <Content Include="images\download %281%29.jpeg" />
+    <Content Include="images\download %283%29.jpeg" />
+    <Content Include="images\download %285%29.jpeg" />
     <Content Include="images\download.jpeg" />
+    <Content Include="images\download__3_-removebg-preview.png" />
+    <Content Include="images\elite.jpg" />
     <Content Include="images\envelope.png" />
     <Content Include="images\Event-design.png" />
+    <Content Include="images\Evento Corporativo Positivo.jpeg" />
+    <Content Include="images\Eventos corporativos.jpeg" />
     <Content Include="images\facebook_2168281.png" />
-    <Content Include="images\Google-Symbol.png" />
+    <Content Include="images\FAQ-removebg.png" />
+    <Content Include="images\ffff.jpeg" />
+    <Content Include="images\formal\1.png" />
+    <Content Include="images\formal\2.png" />
+    <Content Include="images\formal\3.jpg" />
+    <Content Include="images\formal\4.png" />
+    <Content Include="images\formal\5.png" />
+    <Content Include="images\formal\6.png" />
+    <Content Include="images\formal\7.png" />
+    <Content Include="images\formal\8.png" />
+    <Content Include="images\formal\heading3.png" />
+    <Content Include="images\formal\img4.jpg" />
+    <Content Include="images\Functional Dynamic Corporate Event Space.jpeg" />
+    <Content Include="images\gal-1\1.png" />
+    <Content Include="images\gal-1\10.png" />
+    <Content Include="images\gal-1\11.png" />
+    <Content Include="images\gal-1\12.jpeg" />
+    <Content Include="images\gal-1\13.png" />
+    <Content Include="images\gal-1\14.jpeg" />
+    <Content Include="images\gal-1\15.png" />
+    <Content Include="images\gal-1\16.png" />
+    <Content Include="images\gal-1\2.png" />
+    <Content Include="images\gal-1\3.jpg" />
+    <Content Include="images\gal-1\4.png" />
+    <Content Include="images\gal-1\5.png" />
+    <Content Include="images\gal-1\6.jpg" />
+    <Content Include="images\gal-1\7.png" />
+    <Content Include="images\gal-1\8.png" />
+    <Content Include="images\gal-1\9.jpeg" />
+    <Content Include="images\gal-2\1.png" />
+    <Content Include="images\gal-2\10.png" />
+    <Content Include="images\gal-2\2.png" />
+    <Content Include="images\gal-2\3.png" />
+    <Content Include="images\gal-2\4.png" />
+    <Content Include="images\gal-2\5.png" />
+    <Content Include="images\gal-2\6.png" />
+    <Content Include="images\gal-2\7.png" />
+    <Content Include="images\gal-2\8.png" />
+    <Content Include="images\gal-2\9.png" />
+    <Content Include="images\gal-3\11.png" />
+    <Content Include="images\gal-3\6dcfa4d75c7f3db1970ceb42d512b883.jpg" />
+    <Content Include="images\gal-3\d45eeeac3c791e0ce39c3bc5f7120099.jpg" />
+    <Content Include="images\gal-3\International Women%27s Day - Women Uplift  Events.jpeg" />
+    <Content Include="images\gal-3\Womens-Day-forum-1-copy.jpg" />
+    <Content Include="images\gal-3\Womens-Day-forum-100-copy-404x269.jpg" />
+    <Content Include="images\gal-3\Womens-Day-forum-84-copy-404x269.jpg" />
+    <Content Include="images\gal-4\1.jpg" />
+    <Content Include="images\gal-4\2.jpg" />
+    <Content Include="images\gal-4\3.jpg" />
+    <Content Include="images\gal-4\4.jpg" />
+    <Content Include="images\gal-4\5.jpg" />
+    <Content Include="images\gal-4\6.jpg" />
+    <Content Include="images\gal-4\cairo-egypt-wedding-carol-andre-14.jpg" />
+    <Content Include="images\gal-4\cairo-egypt-wedding-carol-andre-16.jpg" />
+    <Content Include="images\gal-4\cairo-egypt-wedding-carol-andre-18.jpg" />
+    <Content Include="images\gal-4\cairo-egypt-wedding-carol-andre-34.jpg" />
+    <Content Include="images\gal-4\cairo-egypt-wedding-carol-andre-38.jpg" />
+    <Content Include="images\gal-5\1.png" />
+    <Content Include="images\gal-5\2.png" />
+    <Content Include="images\gal-5\3.png" />
+    <Content Include="images\gal-5\4.png" />
+    <Content Include="images\gal-5\5.png" />
+    <Content Include="images\header.jpeg" />
+    <Content Include="images\header.jpg" />
+    <Content Include="images\hhhhhhhhhhhh.jpg" />
+    <Content Include="images\images.jpeg" />
+    <Content Include="images\img4.jpg" />
     <Content Include="images\insta.png" />
+    <Content Include="images\Invitation-Card-Mockup.jpg" />
     <Content Include="images\Lake Arrowhead Forest Weddings _ Welcome - Arrowhead Pine Rose Weddings.jpeg" />
+    <Content Include="images\logo.jpg" />
     <Content Include="images\logo.png" />
+    <Content Include="images\logo2.png" />
+    <Content Include="images\logo5-removebg-preview.png" />
+    <Content Include="images\logo5.png" />
+    <Content Include="images\logoedited.png" />
+    <Content Include="images\netw.png" />
+    <Content Include="images\Note free icons designed by Icongeek26.jpeg" />
+    <Content Include="images\our teamm.jpeg" />
+    <Content Include="images\Paper-Scene-Branding-Mockup-4.jpg" />
     <Content Include="images\party.jpeg" />
     <Content Include="images\party1.jpg" />
     <Content Include="images\party2.jpeg" />
     <Content Include="images\phone.png" />
     <Content Include="images\prof.jpeg" />
     <Content Include="images\prof.jpg" />
+    <Content Include="images\Roaa.jpg" />
+    <Content Include="images\Romantic Charleston Fall Wedding.jpeg" />
+    <Content Include="images\sa.jpg" />
+    <Content Include="images\Salma2.jpg" />
+    <Content Include="images\search.png" />
+    <Content Include="images\service-3.svg" />
+    <Content Include="images\Shahd2.jpg" />
+    <Content Include="images\spo.jpeg" />
     <Content Include="images\spo.png" />
     <Content Include="images\spon.png" />
+    <Content Include="images\ssssssssss.jpeg" />
+    <Content Include="images\supply-removebg-preview.png" />
+    <Content Include="images\supply.jpeg" />
+    <Content Include="images\supply.jpg" />
     <Content Include="images\supply.png" />
+    <Content Include="images\team work.jpeg" />
+    <Content Include="images\team.jpeg" />
     <Content Include="images\ted.jpeg" />
     <Content Include="images\tiktok_3116491.png" />
+    <Content Include="images\time.jpeg" />
+    <Content Include="images\time.png" />
+    <Content Include="images\twitter-removebg-preview.png" />
     <Content Include="images\twitter_733635.png" />
     <Content Include="images\tyson.png" />
+    <Content Include="images\user.jpg" />
+    <Content Include="images\user.png" />
+    <Content Include="images\video story.mp4" />
+    <Content Include="images\Wedding backdrop.jpeg" />
+    <Content Include="images\Wedding Inspiration _ By Brittany Branson %281%29.jpeg" />
     <Content Include="images\wedding.jpeg" />
+    <Content Include="images\wedding\1.jpeg" />
+    <Content Include="images\wedding\1.png" />
+    <Content Include="images\wedding\2.jpeg" />
+    <Content Include="images\wedding\2.png" />
+    <Content Include="images\wedding\27 Engagement Photos That Inspire To Say “Yes”.jpeg" />
+    <Content Include="images\wedding\3.jpeg" />
+    <Content Include="images\wedding\3.png" />
+    <Content Include="images\wedding\4.png" />
+    <Content Include="images\wedding\5.png" />
+    <Content Include="images\wedding\6.png" />
+    <Content Include="images\wedding\7.jpeg" />
+    <Content Include="images\wedding\8.png" />
+    <Content Include="images\wedding\a.jpeg" />
+    <Content Include="images\wedding\b.jpeg" />
+    <Content Include="images\wedding\Destination Love_ Invitations for a Travel-themed Bridal Shower.jpeg" />
+    <Content Include="images\wedding\heading.png" />
+    <Content Include="images\wedding\Playful Garden-Inspired Italian Summer Wedding.jpeg" />
+    <Content Include="images\wedding\Untitled.jpeg" />
+    <Content Include="images\WhatsApp Image 2024-04-24 at 12.30.22_1654d566.jpg" />
+    <Content Include="images\WhatsApp Image 2024-04-24 at 12.30.25_6d6edaee.jpg" />
     <Content Include="images\whatsapp_733641.png" />
+    <Content Include="images\wwwwwwwwwwww.jpeg" />
+    <Content Include="Js\addadmin.js" />
+    <Content Include="Js\Admin.js" />
+    <Content Include="Js\Customize.js" />
+    <Content Include="Js\FAQ.js" />
+    <Content Include="Js\gallery.js" />
+    <Content Include="Js\home.js" />
+    <Content Include="Js\event.js" />
+    <Content Include="Js\JQuery.js" />
     <Content Include="Js\navigation.js" />
+    <Content Include="Js\pack.js" />
+    <Content Include="Js\polices.js" />
+    <Content Include="Js\schedule.js" />
+    <Content Include="pack.aspx" />
+    <Content Include="payment.aspx" />
+    <Content Include="PrivacyPolicies.aspx" />
+    <Content Include="Schedule.aspx" />
     <Content Include="SignIn.aspx" />
+    <Content Include="Team.aspx" />
+    <Content Include="Thankmsg.aspx" />
+    <Content Include="UpdateCustomization.aspx" />
+    <Content Include="UpdatePackages.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddAdmin.aspx.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddAdmin.aspx.designer.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,14 +364,70 @@
     <Compile Include="Create.aspx.designer.cs">
       <DependentUpon>Create.aspx</DependentUpon>
     </Compile>
-    <Compile Include="home.aspx.cs">
-      <DependentUpon>home.aspx</DependentUpon>
+    <Compile Include="Customize.aspx.cs">
+      <DependentUpon>Customize.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="home.aspx.designer.cs">
-      <DependentUpon>home.aspx</DependentUpon>
+    <Compile Include="Customize.aspx.designer.cs">
+      <DependentUpon>Customize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Event.aspx.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Event.aspx.designer.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pack.aspx.cs">
+      <DependentUpon>pack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pack.aspx.designer.cs">
+      <DependentUpon>pack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrivacyPolicies.aspx.cs">
+      <DependentUpon>PrivacyPolicies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrivacyPolicies.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicies.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schedule.aspx.cs">
+      <DependentUpon>Schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule.aspx.designer.cs">
+      <DependentUpon>Schedule.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SignIn.aspx.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,8 +435,37 @@
     <Compile Include="SignIn.aspx.designer.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Team.aspx.cs">
+      <DependentUpon>Team.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Team.aspx.designer.cs">
+      <DependentUpon>Team.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Thankmsg.aspx.cs">
+      <DependentUpon>Thankmsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Thankmsg.aspx.designer.cs">
+      <DependentUpon>Thankmsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCustomization.aspx.cs">
+      <DependentUpon>UpdateCustomization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomization.aspx.designer.cs">
+      <DependentUpon>UpdateCustomization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePackages.aspx.cs">
+      <DependentUpon>UpdatePackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdatePackages.aspx.designer.cs">
+      <DependentUpon>UpdatePackages.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\Events.zip" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -138,7 +474,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="AccImg\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -22,13 +22,3 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "create.aspx";
     });
 });
-document.addEventListener("DOMContentLoaded", function () {
-    // Get the button element
-    var joinUsButton = document.getElementById("<%= btnJoinUs.ClientID %>");
-
-    // Event listener for Join Us button
-    joinUsButton.addEventListener("click", function () {
-        // Navigate to the register.aspx page
-        window.location.href = "register.aspx";
-    });
-});

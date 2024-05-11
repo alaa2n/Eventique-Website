@@ -1,0 +1,283 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: hsla(210, 4%, 11%, 1);
+    background-image: radial-gradient(circle at top right, hsla(210, 4%, 11%, 1), transparent), radial-gradient(circle at 20% 80%, rgba(31, 32, 34, 0.677) transparent)
+}
+
+.area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: radial-gradient(circle at top right, hsla(210, 4%, 11%, 1),transparent), radial-gradient(circle at 20% 80%, rgba(31, 32, 34, 0.677), transparent)
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+    .circles li {
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        background: rgba(121, 117, 117, 0.2);
+        animation: animate 25s linear infinite;
+        bottom: -150px;
+    }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+        }
+
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+
+@keyframes animate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: hsl(38, 19%, 75%);
+    padding: 25px 30px;
+    border-radius: 15px;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .container .title {
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+    }
+
+hr {
+    border-bottom: #6483d6 2px solid;
+    width: 18%;
+}
+
+.container .form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+.form .user-details .input-box {
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2.5px;
+    transition: all 0.3s ease;
+    background: hsl(38, 19%, 75%);
+}
+
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid {
+        border-color: black;
+    }
+
+.form .event-detail .details {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 430px;
+    bottom: 30px;
+    padding: 0.6em 2em;
+    border: #141414 solid 0.15em;
+    border-radius: 0.25em;
+    color: #0d0d0e;
+    font-size: 20px;
+    align-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+}
+
+    .button p {
+        z-index: 1;
+    }
+
+    .button:hover {
+        color: #212121;
+    }
+
+    .button:active {
+        border-color: #0b0c0c;
+    }
+
+    .button::after,
+    .button::before {
+        content: "";
+        position: absolute;
+        width: 9em;
+        aspect-ratio: 1;
+        background: #101011;
+        opacity: 50%;
+        border-radius: 50%;
+        transition: transform 500ms, background 300ms;
+    }
+
+    .button::before {
+        left: 0;
+        transform: translateX(-8em);
+    }
+
+    .button::after {
+        right: 0;
+        transform: translateX(8em);
+    }
+
+    .button:hover:before {
+        transform: translateX(-1em);
+        color: #eadcdc;
+    }
+
+    .button:hover:after {
+        transform: translateX(1em);
+        color: #eadcdc;
+    }
+
+    .button:active:before,
+    .button:active:after {
+        background: #0a0a0b;
+    }
+
+.event-detail .input-box select {
+    background-color: rgb(44, 45, 47);
+    color: #eadcdc;
+    padding: 10px 15px;
+    font-size: 19px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+}

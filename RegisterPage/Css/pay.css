@@ -1,0 +1,278 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: hsla(210, 4%, 11%, 1);
+    background-image: radial-gradient(circle at top right, hsla(210, 4%, 11%, 1), transparent), radial-gradient(circle at 20% 80%, rgba(31, 32, 34, 0.677) transparent)
+}
+
+.area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: radial-gradient(circle at top right, hsla(210, 4%, 11%, 1),transparent), radial-gradient(circle at 20% 80%, rgba(31, 32, 34, 0.677), transparent)
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+    .circles li {
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        background: rgba(121, 117, 117, 0.2);
+        animation: animate 25s linear infinite;
+        bottom: -150px;
+    }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+        }
+
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+
+@keyframes animate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: 500px;
+    background: #FFFFFF;
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    cursor: pointer;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 998; /* Ensure the overlay is below the form */
+    display: none; /* Initially hidden */
+}
+
+.modal.clicked .overlay {
+    display: block; /* Show overlay when form is clicked */
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.separator {
+    width: calc(100% - 20px);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    color: #8B8E98;
+    margin: 0 10px;
+    text-align: center;
+}
+
+    .separator > p {
+        word-break: keep-all;
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        font-size: 11px;
+        margin: auto;
+    }
+
+    .separator .line {
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        border: 0;
+        background-color: #e8e8e8;
+        margin: auto;
+    }
+
+.credit-card-info--form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input_container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 15px;
+}
+
+    .split input {
+        width: 100%;
+    }
+
+.input_label {
+    font-size: 16px;
+    color: #8B8E98;
+    font-weight: 600;
+}
+
+.input_field {
+    width: auto;
+    height: 40px;
+    padding: 0 0 0 16px;
+    border-radius: 9px;
+    outline: none;
+    background-color: #F2F2F2;
+    border: 1px solid #e5e5e500;
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+    .input_field:focus {
+        border: 1px solid transparent;
+        box-shadow: 0px 0px 0px 2px #242424;
+        background-color: transparent;
+    }
+
+.purchase--btn {
+    height: 55px;
+    background: #F2F2F2;
+    border-radius: 11px;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    width: 60%;
+    outline: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #0f0f12 0%,#1a182b 50%, #0b081b 100%);
+    box-shadow: 0px 0px 0px 0px #FFFFFF, 0px 0px 0px 0px #363062;
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+    .purchase--btn:hover {
+        box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #363062;
+    }
+
+/* Reset input number styles */
+.input_field::-webkit-outer-spin-button,
+.input_field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input_field[type=number] {
+    -moz-appearance: textfield;
+}

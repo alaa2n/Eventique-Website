@@ -51,6 +51,15 @@ namespace RegisterPage
         protected global::System.Web.UI.WebControls.TextBox txt_passCreate;
 
         /// <summary>
+        /// lblErrorMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorMessage;
+
+        /// <summary>
         /// btnSignUp control.
         /// </summary>
         /// <remarks>
@@ -58,15 +67,6 @@ namespace RegisterPage
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSignUp;
-
-        /// <summary>
-        /// btnToSignIn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToSignIn;
 
         /// <summary>
         /// overlayBtn control.

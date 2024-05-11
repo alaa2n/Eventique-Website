@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     padding: 0px;
@@ -10,7 +10,7 @@
 
 body {
     height: 100vh;
-    background: #f6f5f7;
+    background: hsla(0, 0%, 13%, 1);
     display: grid;
     place-content: center;
     font-family: 'Poppins', sans-serif;
@@ -20,8 +20,7 @@ body {
     position: relative;
     width: 850px;
     height: 500px;
-    background-color: #fff;
-    box-shadow: 25px 30px 55px #e4e0d9;
+    background-color: hsla(40, 12%, 5%, 1);
     border-radius: 13px;
     overflow: hidden;
 }
@@ -48,7 +47,7 @@ form {
 }
 
 h1 {
-    color: #a48254;
+    color: hsl(38, 61%, 73%);
 }
 
 .social-container {
@@ -68,6 +67,7 @@ h1 {
 
 span {
     font-size: 12px;
+    color: hsl(38, 61%, 73%);
 }
 
 .infield {
@@ -79,7 +79,7 @@ span {
 input {
     width: 100%;
     padding: 12px 15px;
-    background-color: #f3f3f3;
+    background-color: hsla(0, 0%, 13%, 1);
     border: none;
     outline: none;
 }
@@ -100,7 +100,7 @@ input:focus ~ lable {
 }
 
 a {
-    color: #a48254;
+    color: hsl(38, 61%, 73%);
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0px;
@@ -114,8 +114,8 @@ a {
 button {
     border-radius: 20px;
     border: 1px solid #a48254;
-    background: #a48254;
-    color: #fff;
+    background: hsl(38, 61%, 73%);
+    color: black;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
@@ -129,8 +129,8 @@ button {
 }
 
     .form-container button:hover {
-        background: #fff;
-        color: #a48254
+        background: black;
+        color: hsl(38, 61%, 73%);
     }
 
 .overlay-container {
@@ -152,15 +152,15 @@ button {
     transform: translateX(-50%);
     width: 143.67px;
     height: 40px;
-    border: 1px solid #fff;
+    border: 1px solid black;
     background: transparent;
     border-radius: 20px;
 }
 
 .overlay {
     position: relative;
-    background: #a48254;
-    color: #fff;
+    background: hsl(38, 61%, 73%);
+    color: black;
     left: -150%;
     height: 100%;
     width: 250%;
@@ -191,7 +191,7 @@ button {
 }
 
 .overlay-panel h1 {
-    color: #fff;
+    color: black;
 }
 
 p {

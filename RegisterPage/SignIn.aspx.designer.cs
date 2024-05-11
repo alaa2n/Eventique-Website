@@ -24,15 +24,6 @@ namespace RegisterPage
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// btnGoogleSignIn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGoogleSignIn;
-
-        /// <summary>
         /// txt_EmailSignIn control.
         /// </summary>
         /// <remarks>
@@ -51,6 +42,15 @@ namespace RegisterPage
         protected global::System.Web.UI.WebControls.TextBox txt_PswdSignIn;
 
         /// <summary>
+        /// lblErrorMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorMessage;
+
+        /// <summary>
         /// btnSignIn control.
         /// </summary>
         /// <remarks>
@@ -58,6 +58,15 @@ namespace RegisterPage
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSignIn;
+
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
 
         /// <summary>
         /// overlayBtn control.
