@@ -19,5 +19,8 @@ This repository contains the backend code for an event management website develo
 - **HTML/CSS**: Frontend markup and styling.
 - **JavaScript**: Client-side scripting for interactive elements.
 
+  ![Screenshot (365)](https://github.com/alaa2n/Eventique-Website/assets/142392919/db7402d3-8cb9-4eaa-844e-bfdaa9475c77)
+
+
 
 
