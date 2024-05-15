@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Services.Description;
 
 namespace RegisterPage
 {
     public partial class payment : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            // You can add any logic needed on page load here
+      {
+
+            txt_PaymentAmount.Text = (string)Session["EventPrice"];
+
+
         }
+
 
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
@@ -27,7 +34,9 @@ namespace RegisterPage
 
             // Retrieve the user ID from the session
             int userId = Convert.ToInt32(Session["Id"]);
-
+            string fullname = (string)Session["FullName"];
+            string email = (string)Session["Email"];
+            string package = (string)Session["package"];
             // Retrieve the packageId from the session
             int packageId = Convert.ToInt32(Session["PackageId"]);
 
@@ -57,9 +66,32 @@ namespace RegisterPage
                     command.ExecuteNonQuery();
                 }
             }
+            SendConfirmationEmail(fullname, email);
 
             // Redirect the user to the thank you page
             Response.Redirect("http://localhost:56397/Thankmsg.aspx");
+        }
+        private void SendConfirmationEmail(string fullName, string email)
+        {
+            // Configure SMTP client
+            SmtpClient client = new SmtpClient("smtp.gmail.com");
+            client.Port = 587;
+            client.EnableSsl = true;
+            client.Credentials = new NetworkCredential("alaanaderelsayed@gmail.com", "ztonbjghuzfllate");
+
+            // Create email message
+            MailMessage mailMessage = new MailMessage();
+            mailMessage.From = new MailAddress("alaanaderelsayed@gmail.com");
+            mailMessage.To.Add(email);
+            mailMessage.Subject = "Payment Confirmation";
+            mailMessage.Body = $"Dear {fullName},\n\nThank you for your payment of {txt_PaymentAmount.Text} for the {Session["package"]} Package. Your payment has been successfully processed.\n\nSincerely,\nThe Eventique Team";
+
+
+           
+            mailMessage.IsBodyHtml = false;
+
+            // Send email
+            client.Send(mailMessage);
         }
     }
 

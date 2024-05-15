@@ -44,7 +44,7 @@ namespace RegisterPage
                 {
                     connection.Open();
                     string query = "select Id, UserName, Email, RoleId from [dbo].[users] WHERE Email = @Email AND Password = @Password";
-                    ;
+                    
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@Email", email);
                     command.Parameters.AddWithValue("@Password", password);

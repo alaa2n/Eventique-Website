@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Stripe;
 
 
 namespace RegisterPage
@@ -106,6 +107,7 @@ namespace RegisterPage
 
                     SendConfirmationEmail(txt_name.Text, txt_email.Text);
 
+                    Session["eventdate2"] = Convert.ToDateTime(date.Text);
 
                     // Redirect or display a success message
                     Response.Redirect("~/Thankmsg.aspx");

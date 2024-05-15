@@ -15,52 +15,6 @@ namespace RegisterPage
 
         }
 
-        protected void btnAddAdmin_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Retrieve admin information from the form fields
-                string adminName = txtUserName.Value.Trim();
-                string email = txtEmail.Value.Trim();
-                string password = txtPassword.Value.Trim();
-
-                // Validate input if necessary
-
-                // Connect to the database and execute the INSERT query
-                using (SqlConnection connection = new SqlConnection(@"Data Source=ALAA\SQLEXPRESS;Initial Catalog=EventWeb;Integrated Security=True;"))
-                {
-                    connection.Open();
-                    string query = "INSERT INTO users (UserName, Email, Password, RoleId, UserType) VALUES (@UserName, @Email, @Password, @RoleId, @UserType)";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@UserName", adminName);
-                    command.Parameters.AddWithValue("@Email", email);
-                    command.Parameters.AddWithValue("@Password", password);
-                    command.Parameters.AddWithValue("@RoleId", 1);
-                    command.Parameters.AddWithValue("@UserType", "admin");
-
-                    int rowsAffected = command.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-
-                        lblSuccessMessage.Text = "Admin added successfully!";
-                        lblSuccessMessage.Visible = true;
-                        txtUserName.Value = "";
-                        txtEmail.Value = "";
-                        txtPassword.Value = "";
-                    }
-                    else
-                    {
-                        // Handle the case where the admin was not added
-                        // Display an error message or take appropriate action
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Handle any exceptions
-                // Display an error message or log the exception
-            }
-        }
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
@@ -68,6 +22,55 @@ namespace RegisterPage
              Response.Redirect("~/SignIn.aspx");
         }
 
+        protected void btnAddAdmin_Click1(object sender, EventArgs e)
+        {
+            try
+            {
+                // Retrieve admin information from the form fields
+                string email = txtEmail.Text;
+                string password = txtPassword.Text;
 
+                // Validate input if necessary
+
+                // Connect to the database and execute the INSERT query
+                using (SqlConnection cn = new SqlConnection(@"Data Source=ALAA\SQLEXPRESS;Initial Catalog=EventWeb;Integrated Security=True;"))
+                {
+                    cn.Open();
+                    SqlCommand command = new SqlCommand("INSERT INTO [dbo].[users] (UserName, Email, Password, RoleId, UserType) VALUES (@UserName, @Email, @Password,@RoleId, 'Admin')", cn);
+                    command.Parameters.AddWithValue("@UserName", txtUserName.Text);
+                    command.Parameters.AddWithValue("@Email", txtEmail.Text);
+                    command.Parameters.AddWithValue("@Password", txtPassword.Text);
+                    command.Parameters.AddWithValue("@RoleId", 1);
+
+
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        // Insert successful
+                        lblSuccessMessage.Text = "Admin added successfully!";
+                        lblSuccessMessage.Visible = true;
+                        txtUserName.Text = "";
+                        txtEmail.Text = "";
+                        txtPassword.Text = "";
+                    }
+                    else
+                    {
+                        // Insert failed
+                        lblSuccessMessage.Text = "Failed to add admin. Please try again.";
+                        lblSuccessMessage.Visible = true;
+                    }
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Response.Write("<script>alert('An error occurred: " + ex.Message + "')</script>");
+            }
+        }
     }
 }

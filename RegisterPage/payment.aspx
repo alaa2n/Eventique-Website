@@ -9,7 +9,21 @@
     <link rel="stylesheet" href="Css/pay.css">
     
    
-<title>Payment</title></head>
+<title>Payment</title>
+    <style>
+        .input_field2 {
+    width: auto;
+    height: 30px;
+    padding: 0 0 0 16px;
+    font-weight:500px;
+    border-radius: 9px;
+    outline: none;
+    background-color: #F2F2F2;
+    border: 1px solid #e5e5e500;
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+    </style>
+</head>
 <body>
     <form id="form1" runat="server">
   <div class="overlay"></div> 
@@ -52,7 +66,9 @@
             </div>
                  <div class="input_container">
               <label for="password_field" class="input_label">Amount</label>
-              <asp:TextBox ID="txt_PaymentAmount" runat="server" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="123,45 EGP"></asp:TextBox>
+                     <asp:Label ID="txt_PaymentAmount" runat="server" class="input_field2" ></asp:Label>
+<%--              <asp:TextBox ID="txt_PaymentAmount" runat="server" class="input_field" type="number" name="input-name" title="Inpit title"></asp:TextBox>--%>
+
             </div>
                   <div class="input_container">
               <label for="payment_type" class="input_label">Payment Type</label>

@@ -45,11 +45,13 @@
         <div class="today-date">
           <div class="event-day">wed</div>
           <div class="event-date">12th december 2022</div>
+<%--    <div class="event-day"><%= DateTime.Today.DayOfWeek.ToString().Substring(0, 3).ToLower() %></div>
+            <asp:Label ID="eventDateLabel"   class="event-date" runat="server"></asp:Label>--%>
         </div>
         <div class="events"></div>
-        <div class="add-event-wrapper">
-          <div class="add-event-header">
-            <div class="title">Add Event</div>
+<%--        <div class="add-event-wrapper">--%>
+<%--          <div class="add-event-header">--%>
+          <%--  <div class="title">Add Event</div>
             <i class="fas fa-times close"></i>
           </div>
           <div class="add-event-body">
@@ -73,7 +75,8 @@
           </div>
           <div class="add-event-footer">
             <button class="add-event-btn">Add Event</button>
-          </div>
+          </div>--%>
+          <asp:GridView ID="GridView1" runat="server"></asp:GridView>
         </div>
       </div>
       <div class="add-event">

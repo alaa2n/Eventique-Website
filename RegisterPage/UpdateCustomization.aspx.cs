@@ -52,19 +52,31 @@ namespace RegisterPage
         }
         void LoadRecord()
         {
-            SqlCommand comm = new SqlCommand("select * from Events", Conn);
+            SqlCommand comm = new SqlCommand("select * from Events Where EventID = @EventID", Conn);
+            comm.Parameters.AddWithValue("@EventID", int.Parse(txtSearch.Text));
+
             SqlDataAdapter d = new SqlDataAdapter(comm);
             DataSet ds = new DataSet();
             d.Fill(ds);
             if (ds.Tables[0].Rows.Count > 0)
             {
                 DataRow row = ds.Tables[0].Rows[0];
-                //lblAddress.Text = "Address: " + row["Address"].ToString();
-                //lblPhoneNumber.Text = "Phone Number: " + row["PhoneNumber"].ToString();
-                //lblEventDate.Text = "Event Date: " + row["EventDate"].ToString();
-                //lblDetails.Text = "Details: " + row["Details"].ToString();
-                //lblEstimatedBudget.Text = "Estimated Budget: " + row["EstimatedBudget"].ToString();
-                //lblEstimatedGuestCount.Text = "Estimated Guest Count: " + row["EstimatedGuestCount"].ToString();
+                lblAddress.Text = "Address: " + row["Address"].ToString();
+                lblPhoneNumber.Text = "Phone Number: " + row["PhoneNumber"].ToString();
+                lblEventDate.Text = "Event Date: " + row["EventDate"].ToString();
+                lblDetails.Text = "Details: " + row["Details"].ToString();
+                lblEstimatedBudget.Text = "Estimated Budget: " + row["EstimatedBudget"].ToString();
+                lblEstimatedGuestCount.Text = "Estimated Guest Count: " + row["EstimatedGuestCount"].ToString();
+            }
+            else
+            {
+                // Clear labels if no record found
+                lblAddress.Text = "";
+                lblPhoneNumber.Text = "";
+                lblEventDate.Text = "";
+                lblDetails.Text = "";
+                lblEstimatedBudget.Text = "";
+                lblEstimatedGuestCount.Text = "";
             }
         }
 

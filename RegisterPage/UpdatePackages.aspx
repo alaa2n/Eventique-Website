@@ -38,7 +38,7 @@
     <div class="side-bar-nav">
         <ul>
             <li>
-                <a href="#">
+                <a href="http://localhost:56397/Admin.aspx">
                     <span>
                         <i class="fas fa-home"></i>
                     </span>
@@ -46,7 +46,7 @@
                 </a>
             </li>
             <li>
-                <a href="#costum-table">
+                <a href="http://localhost:56397/customview.aspx">
                     <span>
                         <i class="fab fa-uikit"></i>
                     </span>
@@ -54,7 +54,7 @@
                 </a>
             </li>
             <li>
-                <a href="#pack-table">
+                <a href="http://localhost:56397/Packview.aspx">
                     <span>
                         <i class="fas fa-cubes"></i>
                     </span>
@@ -62,11 +62,11 @@
                 </a>
             </li>
               <li>
-                    <a href="Schedule.aspx">
+                    <a href="http://localhost:56397/pay.aspx">
                         <span>
                             <i class="fas fa-table"></i>
                         </span>
-                        <span class="nav-link">Schedule</span>
+                        <span class="nav-link">Payment</span>
                     </a>                    
                 </li>
                        <li>

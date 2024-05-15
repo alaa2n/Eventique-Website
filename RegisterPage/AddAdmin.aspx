@@ -37,7 +37,7 @@
             <div class="side-bar-nav">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="http://localhost:56397/Admin.aspx">
                             <span>
                                 <i class="fas fa-home"></i>
                             </span>
@@ -45,7 +45,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="http://localhost:56397/Admin.aspx#costum-table">
+                        <a href="http://localhost:56397/customview.aspx">
                             <span>
                                 <i class="fab fa-uikit"></i>
                             </span>
@@ -54,7 +54,7 @@
                     </li>
 
                     <li>
-                        <a href="#pack-table">
+                        <a href="http://localhost:56397/Packview.aspx">
                             <span>
                                 <i class="fas fa-cubes"></i>
                             </span>
@@ -62,11 +62,11 @@
                         </a>
                     </li>
                     <li>
-                        <a href="Schedule.aspx">
+                        <a href="http://localhost:56397/pay.aspx">
                             <span>
                                 <i class="fas fa-table"></i>
                             </span>
-                            <span class="nav-link">Schedule</span>
+                            <span class="nav-link">Payment</span>
                         </a>                    
                     </li>
 
@@ -85,10 +85,7 @@
         <header>
             <div class="head_inner">
                 <div class="right-part">
-                    <form>
-                        <input type="text" placeholder="Search..." >
-                        <button> <i class="fas fa-search"></i></button>
-                    </form>
+                  
                 </div>
 
                 <div class="left-part">
@@ -127,28 +124,29 @@
         </header>
 
         <div class="main-content">
-            <div class="title">
-                <h2>Add Admin Information</h2>
-            </div>
-            <hr>
-            <br>
-            <div class="form-wrapper">
-                <div class="input-box">
-                    <span class="details">Admin Name </span>
-                    <input type="text" placeholder="Enter UserName" required runat="server" id="txtUserName">
-                </div>
-                <div class="input-box">
-                    <span class="details">Email </span>
-                    <input type="email" placeholder="Enter active Email" required runat="server" id="txtEmail">
-                </div>
-                <div class="input-box">
-                    <span class="details">Password </span>
-                    <input type="password" placeholder="8 character min" required runat="server" id="txtPassword">
-                    <div><asp:Label ID="lblSuccessMessage" runat="server" CssClass="success-message" Visible="false"></asp:Label></div>
-                </div>
-                <asp:Button ID="btnAddAdmin" runat="server" Text="Add" CssClass="custom-button" Onclick="btnAddAdmin_Click" />
-            </div>
+    <div class="title">
+        <h2>Add Admin Information</h2>
+    </div>
+    <hr>
+    <br>
+    <div class="form-wrapper">
+        <div class="input-box">
+            <span class="details">Admin Name </span>
+            <asp:TextBox ID="txtUserName" placeholder="Enter UserName" required runat="server"></asp:TextBox>
         </div>
+        <div class="input-box">
+            <span class="details">Email </span>
+            <asp:TextBox ID="txtEmail" placeholder="Enter active Email"  required TextMode="Email" runat="server"></asp:TextBox>
+        </div>
+        <div class="input-box">
+            <span class="details">Password </span>
+            <asp:TextBox ID="txtPassword" TextMode="Password" placeholder="6 character min"  required runat="server"></asp:TextBox>
+        </div>
+          <asp:Label ID="lblSuccessMessage" runat="server" CssClass="success-message" Visible="false" ForeColor="Green"></asp:Label>
+
+        <asp:Button ID="btnAddAdmin" runat="server" Text="Add" CssClass="custom-button" onclick="btnAddAdmin_Click1" />
+    </div>
+</div>
 
 
 

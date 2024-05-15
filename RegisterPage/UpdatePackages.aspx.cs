@@ -90,10 +90,12 @@ namespace RegisterPage
         }
         void LoadRecord()
         {
-            SqlCommand comm = new SqlCommand("select * from Packages", Conn);
+            SqlCommand comm = new SqlCommand("SELECT * FROM Packages WHERE PackageId = @PackageId", Conn);
+            comm.Parameters.AddWithValue("@PackageId", int.Parse(txtSearch.Text));
             SqlDataAdapter d = new SqlDataAdapter(comm);
             DataSet ds = new DataSet();
             d.Fill(ds);
+
             if (ds.Tables[0].Rows.Count > 0)
             {
                 DataRow row = ds.Tables[0].Rows[0];
@@ -101,8 +103,17 @@ namespace RegisterPage
                 lblPhoneNumber.Text = "Phone Number: " + row["PhoneNumber"].ToString();
                 lblEventDate.Text = "Event Date: " + row["EventDate"].ToString();
                 lblEmail.Text = "Email: " + row["Email"].ToString();
-
             }
+            else
+            {
+                // Clear labels if no record found
+                lblAddress.Text = "";
+                lblPhoneNumber.Text = "";
+                lblEventDate.Text = "";
+                lblEmail.Text = "";
+            }
+
+
 
         }
 

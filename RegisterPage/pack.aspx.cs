@@ -41,6 +41,29 @@ namespace RegisterPage
                             // Example: Display user data on the page
                             txt_name.Text = username;
                             txt_email.Text = email;
+                            if (Session["eventtype1"] != null)
+                            {
+                                //string sessionValue = Session["eventtype"].ToString();
+                                // Iterate through the dropdown list items
+                                foreach (ListItem item in event_type.Items)
+                                {
+                                    // Check if the current item's value matches the session value
+                                    if (item.Value == (string)Session["eventtype1"] || item.Value == (string)Session["eventtype2"])
+                                    {
+                                        // Enable the matched item
+                                        item.Enabled = true;
+                                        // Select the matched item
+                                    }
+                                    else
+                                    {
+                                        // Disable and deselect other items
+                                        item.Enabled = false;
+                                    }
+                                }
+                            }
+                            SelectedPackage.Text = (string)Session["package"];
+
+
                         }
                         else
                         {
@@ -58,6 +81,7 @@ namespace RegisterPage
                     // Redirect the user to the login page
                     Response.Redirect("~/SignIn.aspx");
                 }
+
             }
         }
 
@@ -80,38 +104,22 @@ namespace RegisterPage
             string phoneNumber = txt_phone.Text;
             string email = txt_email.Text;
             DateTime eventDate = Convert.ToDateTime(date.Text);
-            string eventType = event_type.Value;
-            string selectedPackage = "";
+            string eventType = event_type.SelectedValue;
+            string selectedPackage = SelectedPackage.Text;
+            if (!IsEventDateAvailable(selectedPackage, eventDate))
+            {
+                // Event date is not available, display an error message or take appropriate action
+                // For example:
+                lblError.Text = "The selected event date is not available for booking, Please choose another date";
+                return;
+            }
 
-            // Determine the selected package based on the event type
-            if (event_type.Value == "wedding")
-            {
-                selectedPackage = WeddingPackage.Value;
-            }
-            else if (event_type.Value == "engagement")
-            {
-                selectedPackage = EngagementPackage.Value;
-            }
-            else if (event_type.Value == "birthday")
-            {
-                selectedPackage = BirthdayPackage.Value;
-            }
-            else if (event_type.Value == "anniversary")
-            {
-                selectedPackage = AnniversaryPackage.Value;
-            }
-            else if (event_type.Value == "formal")
-            {
-                selectedPackage = FormalPackage.Value;
-            }
-            // Add other conditions for different event types if needed
-
-            // Insert values into the Packages table
             using (SqlConnection connection = new SqlConnection(@"Data Source=ALAA\SQLEXPRESS;Initial Catalog=EventWeb;Integrated Security=True;"))
             {
                 connection.Open();
                 string query = "INSERT INTO Packages (UserId, FullName, Address, PhoneNumber, Email, EventDate, EventType, SelectedEventType) " +
-                             "VALUES (@UserId, @FullName, @Address, @PhoneNumber, @Email, @EventDate, @EventType, @SelectedEventType)";
+                      "OUTPUT INSERTED.PackageId " +
+                      "VALUES (@UserId, @FullName, @Address, @PhoneNumber, @Email, @EventDate, @EventType, @SelectedEventType)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -125,22 +133,45 @@ namespace RegisterPage
                     command.Parameters.AddWithValue("@EventType", eventType);
                     command.Parameters.AddWithValue("@SelectedEventType", selectedPackage);
 
-                    //command.ExecuteNonQuery();
-
+                    // Execute the query and retrieve the generated PackageId
                     int packageId = Convert.ToInt32(command.ExecuteScalar());
 
+                    // Store the generated PackageId in the session
                     Session["PackageId"] = packageId;
+                    Session["FullName"] = fullName;
+                    Session["Email"] = email;
+                    Session["package"] = selectedPackage;
+                    Session["eventdate"] = eventDate;
                 }
 
 
+
                 Response.Redirect("http://localhost:56397/payment.aspx");
-
-
-
-            
             }
         }
+        // Function to check if the event date is available for booking
+        private bool IsEventDateAvailable(string selectedPackage, DateTime eventDate)
+        {
+            bool isAvailable = false;
 
+            // Query the database to check if the event date is available for the selected event type
+            using (SqlConnection connection = new SqlConnection(@"Data Source=ALAA\SQLEXPRESS;Initial Catalog=EventWeb;Integrated Security=True;"))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM Packages WHERE EventDate = @EventDate AND SelectedEventType = @SelectedEventType";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@EventDate", eventDate);
+                    command.Parameters.AddWithValue("@SelectedEventType", selectedPackage);
+
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    // If count is 0, it means the event date is available; otherwise, it's already booked
+                    isAvailable = count == 0;
+                }
+            }
+
+            return isAvailable;
+        }
 
     }
 }

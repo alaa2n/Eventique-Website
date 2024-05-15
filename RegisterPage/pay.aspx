@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="RegisterPage.Admin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pay.aspx.cs" Inherits="RegisterPage.pay" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 <head runat="server">
       <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventique-Admin</title>
+  <title>Eventique-Payment</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="Js/Admin.js"></script>
 
@@ -50,7 +50,8 @@
           cursor: pointer;
       }
   </style>
-    </head>
+
+</head>
 <body>
     <form id="form1" runat="server">
             <!-- SIDE BAR-->
@@ -77,7 +78,7 @@
             <div class="side-bar-nav">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="http://localhost:56397/Admin.aspx">
                             <span>
                                 <i class="fas fa-home"></i>
                             </span>
@@ -102,19 +103,18 @@
                         </a>
                     </li>
                     <li>
-                    <a href="http://localhost:56397/pay.aspx">
+                    <a href="#">
                         <span>
                             <i class="fas fa-table"></i>
                         </span>
                         <span class="nav-link">Payment</span>
                     </a>                    
                 </li>
-
                        <li>
-                            <asp:Button ID="btnLogout" Style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 10px 30px; width: 100px; text-decoration: none; cursor: pointer; margin: 10px auto; display: block;" runat="server" Text="Log Out" CssClass="btn nav-link" Onclick="btnLogout_Click1" />
+                            <asp:Button ID="btnLogout" Style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 10px 30px; width: 100px; text-decoration: none; cursor: pointer; margin: 10px auto; display: block;" runat="server" Text="Log Out" CssClass="btn nav-link" Onclick="btnLogout_Click" />
                         </li>
                     <div class="admin">
-                        <a href="http://localhost:56397/AddAdmin.aspx" Style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 10px 30px; width: 100px; text-decoration: none; cursor: pointer; margin: 10px auto; margin-left: 35px;" text-align: center;  display: block;" CssClass="btn nav-link">Add</a>
+                        <a href="http://localhost:56397/AddAdmin.aspx" Style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 10px 30px; width: 100px; text-decoration: none; cursor: pointer; margin: 10px auto; margin-left: 35px;" text-align: center;" display: block;">Edit</a>
                     </div>
                 </ul>
             </div>
@@ -212,31 +212,35 @@
 
         
 
-            <div class="main-table">
-                <div class="title">
-                    <h2>All Users</h2>
-                </div>
-
-                <div class="user-table">
-                    <asp:GridView ID="GridView1" runat="server"  Width="100%" HeaderStyle-BackColor="#9933ff" HeaderStyle-ForeColor="White" text-align="center" >
-
-                    
-                     <columns>
-                         <asp:TemplateField>
-                             <ItemTemplate>
-                                <asp:LinkButton ID="linkbtndelete" style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 5px 15px; text-decoration: none; display: inline-block; cursor: pointer;" OnClientClick="return confirm('Are you sure to delete?');" runat="server" Onclick="linkbtndelete_Click1">Delete</asp:LinkButton>
-
-
-                             </ItemTemplate>
-
-
-                         </asp:TemplateField>
-
-                     </columns>
-                    </asp:GridView>
-                </div>
-            </div>
   
+
+          
+
+       
+
+          <div class="pay-table" >
+            <div class="title">
+                <h2>Payment Package Users</h2>
+            </div>
+      <div class="user-table">
+         
+          <asp:GridView ID="GridView4" runat="server" Width="100%" HeaderStyle-BackColor="#9933ff" HeaderStyle-ForeColor="White">
+
+          
+           <columns>
+               <asp:TemplateField>
+                   <ItemTemplate>
+                       <asp:LinkButton ID="btn_paydel" style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 5px 15px; text-decoration: none; display: inline-block; cursor: pointer;"  OnClientClick="return confirm('Are you sure to delete?');" runat="server" Onclick="btn_paydel_Click">Delete</asp:LinkButton>
+                   </ItemTemplate>
+
+
+               </asp:TemplateField>
+
+           </columns>
+          </asp:GridView>                
+
+      </div>
+  </div>
 
         </div>
 

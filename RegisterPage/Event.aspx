@@ -82,7 +82,7 @@
                     <div class="separator"></div>
                     <p class="info">Basic Package</p>
                     <p class="price">45K EGP</p>
-
+       
                     <div class="additional-info">
                         <p class="info">
                             <i class="fas fa-map-marker-alt"></i>

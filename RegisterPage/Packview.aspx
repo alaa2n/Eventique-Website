@@ -1,59 +1,59 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="RegisterPage.Admin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Packview.aspx.cs" Inherits="RegisterPage.Packview" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-      <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventique-Admin</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="Js/Admin.js"></script>
+     <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventique-Packages</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="Js/Admin.js"></script>
 
-  <link href="Css/Admin.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/5c73ef7c28.js" crossorigin="anonymous"></script>
+<link href="Css/Admin.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/5c73ef7c28.js" crossorigin="anonymous"></script>
 
-  <style>
-      /* Styles for tables */
-      table {
-          width: 100%;
-          border-collapse: collapse;
-          margin-bottom: 20px;
-      }
+<style>
+    /* Styles for tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
 
-      th, td {
-          border: 1px solid #ddd;
-          padding: 8px;
-          text-align: center;
-      }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
 
-      th {
-          background-color: #e18a2c;
-          color: white;
-      }
+    th {
+        background-color: #e18a2c;
+        color: white;
+    }
 
-      tr:nth-child(even) {
-          background-color: #f2f2f2;
-      }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 
-      /* Additional styles for buttons */
-      .btn {
-          border-radius: 9999px;
-          background-color: #e18a2c;
-          color: #fff;
-          padding: 5px 15px;
-          text-decoration: none;
-          cursor: pointer;
-      }
-  </style>
-    </head>
+    /* Additional styles for buttons */
+    .btn {
+        border-radius: 9999px;
+        background-color: #e18a2c;
+        color: #fff;
+        padding: 5px 15px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+</head>
 <body>
     <form id="form1" runat="server">
-            <!-- SIDE BAR-->
+                  <!-- SIDE BAR-->
         <div class="side-bar">
 
             <div class="logo">
@@ -77,7 +77,7 @@
             <div class="side-bar-nav">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="http://localhost:56397/Admin.aspx">
                             <span>
                                 <i class="fas fa-home"></i>
                             </span>
@@ -94,7 +94,7 @@
                     </li>
 
                     <li>
-                        <a href="http://localhost:56397/Packview.aspx">
+                        <a href="#">
                             <span>
                                 <i class="fas fa-cubes"></i>
                             </span>
@@ -109,12 +109,11 @@
                         <span class="nav-link">Payment</span>
                     </a>                    
                 </li>
-
                        <li>
-                            <asp:Button ID="btnLogout" Style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 10px 30px; width: 100px; text-decoration: none; cursor: pointer; margin: 10px auto; display: block;" runat="server" Text="Log Out" CssClass="btn nav-link" Onclick="btnLogout_Click1" />
+                            <asp:Button ID="btnLogout" Style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 10px 30px; width: 100px; text-decoration: none; cursor: pointer; margin: 10px auto; display: block;" runat="server" Text="Log Out" CssClass="btn nav-link" Onclick="btnLogout_Click" />
                         </li>
                     <div class="admin">
-                        <a href="http://localhost:56397/AddAdmin.aspx" Style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 10px 30px; width: 100px; text-decoration: none; cursor: pointer; margin: 10px auto; margin-left: 35px;" text-align: center;  display: block;" CssClass="btn nav-link">Add</a>
+                        <a href="http://localhost:56397/AddAdmin.aspx" Style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 10px 30px; width: 100px; text-decoration: none; cursor: pointer; margin: 10px auto; margin-left: 35px;" text-align: center;" display: block;">Edit</a>
                     </div>
                 </ul>
             </div>
@@ -209,34 +208,32 @@
             </div>
         </div>
 
-
-        
-
-            <div class="main-table">
+            <div class="pack-table">
                 <div class="title">
-                    <h2>All Users</h2>
+                    <h2>Packages Users</h2>
                 </div>
 
                 <div class="user-table">
-                    <asp:GridView ID="GridView1" runat="server"  Width="100%" HeaderStyle-BackColor="#9933ff" HeaderStyle-ForeColor="White" text-align="center" >
+                    <asp:LinkButton ID="LinkButton" Style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 5px 15px; width: 40px; text-decoration: none; cursor: pointer;" runat="server" Onclick="LinkButton_Click">update</asp:LinkButton>
 
+                   <asp:GridView ID="GridView3" runat="server" Width="100%" HeaderStyle-BackColor="#9933ff" HeaderStyle-ForeColor="White">
+
+
+                    <columns>
+                    <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:LinkButton ID="linkbtnpackdel" style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 5px 15px; text-decoration: none; display: inline-block; cursor: pointer;"  OnClientClick="return confirm('Are you sure to delete?');" runat="server" Onclick="linkbtnpackdel_Click">Delete</asp:LinkButton>
                     
-                     <columns>
-                         <asp:TemplateField>
-                             <ItemTemplate>
-                                <asp:LinkButton ID="linkbtndelete" style="border-radius: 9999px; background-color: #e18a2c; color: #fff; padding: 5px 15px; text-decoration: none; display: inline-block; cursor: pointer;" OnClientClick="return confirm('Are you sure to delete?');" runat="server" Onclick="linkbtndelete_Click1">Delete</asp:LinkButton>
+                     </ItemTemplate>
 
 
-                             </ItemTemplate>
+                      </asp:TemplateField>
 
-
-                         </asp:TemplateField>
-
-                     </columns>
-                    </asp:GridView>
+                        </columns>
+                </asp:GridView>    
                 </div>
             </div>
-  
+
 
         </div>
 

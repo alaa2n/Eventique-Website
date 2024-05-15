@@ -36,7 +36,7 @@
     <div class="side-bar-nav">
         <ul>
             <li>
-                <a href="#">
+                <a href="http://localhost:56397/Admin.aspx">
                     <span>
                         <i class="fas fa-home"></i>
                     </span>
@@ -44,7 +44,7 @@
                 </a>
             </li>
             <li>
-                <a href="#costum-table">
+                <a href="http://localhost:56397/customview.aspx">
                     <span>
                         <i class="fab fa-uikit"></i>
                     </span>
@@ -52,7 +52,7 @@
                 </a>
             </li>
             <li>
-                <a href="#pack-table">
+                <a href="http://localhost:56397/Packview.aspx">
                     <span>
                         <i class="fas fa-cubes"></i>
                     </span>
@@ -60,11 +60,11 @@
                 </a>
             </li>
             <li>
-        <a href="Schedule.aspx">
+        <a href="http://localhost:56397/pay.aspx">
             <span>
                 <i class="fas fa-table"></i>
             </span>
-            <span class="nav-link">Schedule</span>
+            <span class="nav-link">Payment</span>
         </a>
     </li>
                        <li>
@@ -150,14 +150,14 @@
                     <asp:TextBox placeholder="Update Num Of Guests" runat="server" ID="txt_guestCount"></asp:TextBox>
                 </div>
                 <div>
-                 <%--   <div>
+                    <div>
         <asp:Label ID="lblAddress" runat="server" Text=""></asp:Label><br />
         <asp:Label ID="lblPhoneNumber" runat="server" Text=""></asp:Label><br />
         <asp:Label ID="lblEventDate" runat="server" Text=""></asp:Label><br />
         <asp:Label ID="lblDetails" runat="server" Text=""></asp:Label><br />
         <asp:Label ID="lblEstimatedBudget" runat="server" Text=""></asp:Label><br />
         <asp:Label ID="lblEstimatedGuestCount" runat="server" Text=""></asp:Label><br />
-    </div>--%>
+    </div>
 
 
                     <asp:Label ID="lblMessage" runat="server" CssClass="success-message" Visible="true"></asp:Label>
